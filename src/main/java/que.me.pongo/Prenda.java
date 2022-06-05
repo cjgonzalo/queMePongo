@@ -7,49 +7,43 @@ public class Prenda {
   Material material;
   Color colorPrincipal;
   Color colorSecundario;
+  Trama trama;
 
   public String getCategoria() {
     return tipo.getCategoria();
   }
 
-  private void setTipo(@NotNull TipoPrenda tipo) {
-    if (tipo.equals(null)) {
-      throw new TipoIncompletoException();
-    } else {
-      this.tipo = tipo;
-    }
+  public TipoPrenda getTipo() {
+    return this.tipo;
   }
 
-  private void setMaterial(@NotNull Material material) {
-    if (material.equals(null)) {
-      throw new MaterialIncompletoException();
-    } else {
-      this.material = material;
-    }
+  public Material getMaterial() {
+    return material;
   }
 
-  private void setColorPrincipal(@NotNull Color color) {
-    if (color.equals(null)) {
-      throw new ColorPrincipalIncompletoException();
-    } else {
-      this.colorPrincipal = color;
-    }
+  public Color getColorPrincipal() {
+    return colorPrincipal;
+  }
+
+  public Color getColorSecundario() {
+    return colorSecundario;
+  }
+
+  public Trama getTrama() {
+    return trama;
   }
 
   public Prenda(
       @NotNull TipoPrenda tipo,
       @NotNull Material material,
       @NotNull Color colorPrincipal,
-      Color colorSecundario
+      Color colorSecundario,
+      @NotNull Trama trama
   ) {
-    try {
-      setTipo(tipo);
-      setMaterial(material);
-      setColorPrincipal(colorPrincipal);
-    } catch (PrendaIncompletaException e) {
-      e.message();
-    }
-
+    this.tipo = tipo;
+    this.material = material;
+    this.colorPrincipal = colorPrincipal;
     this.colorSecundario = colorSecundario;
+    this.trama = trama;
   }
 }
