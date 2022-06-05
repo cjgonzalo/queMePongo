@@ -22,7 +22,7 @@ public class BorradorPrendaTest {
   }
   @Test
   public void unBorradorNoPuedeGuardarUnTipoNulo() {
-    assertThrows(TipoIncompletoException.class, () -> borradorConTipoNulo());
+    assertThrows(TipoIncompletoException.class, this::borradorConTipoNulo);
   }
 
   @Test
@@ -45,8 +45,8 @@ public class BorradorPrendaTest {
     assertEquals(prendaConTramaPorDefault().getTrama(), Trama.LISA);
   }
 
-  public BorradorPrenda borradorConTipoNulo() {
-    return new BorradorPrenda(null);
+  public void borradorConTipoNulo() {
+    new BorradorPrenda(null);
   }
 
   public BorradorPrenda borradorConColorSecundarioNulo() {
