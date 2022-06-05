@@ -23,14 +23,17 @@ public class PrendaTest {
   }
 
   private Prenda prendaSinColorSecundario() {
-    return new Prenda(TipoPrenda.PANTALON_CORTO, Material.TELA, color, null);
+    TipoPrenda pantalonCorto = new TipoPrenda(CategoriaPrenda.PARTE_INFERIOR);
+    return new Prenda(pantalonCorto, Material.TELA, color, null);
   }
 
   private Prenda camisaMangaCorta() {
-    return new Prenda(TipoPrenda.CAMISA_MANGA_CORTA, Material.TELA, color, color);
+    TipoPrenda camisaMangaCorta = new TipoPrenda(CategoriaPrenda.PARTE_SUPERIOR);
+    return new Prenda(camisaMangaCorta, Material.TELA, color, color);
   }
 
   private Prenda camisaMangaLarga() {
-    return new Prenda(TipoPrenda.CAMISA_MANGA_LARGA, Material.TELA, color, color);
+    TipoPrenda camisaMangaLarga = new TipoPrenda(CategoriaPrenda.PARTE_SUPERIOR);
+    return new Prenda(camisaMangaLarga, Material.TELA, color, color);
   }
 }
