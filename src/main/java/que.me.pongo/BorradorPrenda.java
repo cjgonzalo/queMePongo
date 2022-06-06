@@ -10,11 +10,10 @@ public class BorradorPrenda {
   Trama trama;
 
   public BorradorPrenda(TipoPrenda tipo) {
-    try {
-      validarNoNulo(tipo);
-      this.tipo = tipo;
-    } catch (PrendaIncompletaException e) {
+    if (tipo == null) {
       throw new TipoIncompletoException();
+    } else {
+      this.tipo = tipo;
     }
   }
 
@@ -23,12 +22,7 @@ public class BorradorPrenda {
   }
 
   public void especificarMaterial(Material material) {
-    try {
-      validarNoNulo(material);
-      this.material = material;
-    } catch (PrendaIncompletaException e) {
-      throw new MaterialIncompletoException();
-    }
+    this.material = material;
   }
 
   public Material getMaterial() {
@@ -36,12 +30,7 @@ public class BorradorPrenda {
   }
 
   public void especificarColorPrincipal(Color color) {
-    try {
-      validarNoNulo(color);
-      this.colorPrincipal = color;
-    } catch (PrendaIncompletaException e) {
-      throw new ColorPrincipalIncompletoException();
-    }
+    this.colorPrincipal = color;
   }
 
   public Color getColorPrincipal() {
@@ -69,6 +58,11 @@ public class BorradorPrenda {
   }
 
   public Prenda crearPrenda() {
+    if (this.material == null) {
+      throw new MaterialIncompletoException();
+    } else if (this.colorPrincipal == null) {
+      throw new ColorPrincipalIncompletoException();
+    }
     return new Prenda(
         this.tipo,
         this.material,
@@ -76,11 +70,5 @@ public class BorradorPrenda {
         this.colorSecundario,
         this.trama
     );
-  }
-
-  public void validarNoNulo(Object elemento) {
-    if (elemento == null) {
-      throw new PrendaIncompletaException();
-    }
   }
 }
