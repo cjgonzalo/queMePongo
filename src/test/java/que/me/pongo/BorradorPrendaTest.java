@@ -45,6 +45,17 @@ public class BorradorPrendaTest {
     assertEquals(prendaConTramaPorDefault().getTrama(), Trama.LISA);
   }
 
+  @Test
+  public void sePuedeGuardarUnBorradorIncompleto() {
+    assertEquals(borradorInompleto().getMaterial(), null);
+  }
+
+  @Test
+  public void noSePuedeGuardarUnaPrendaIncompleta() {
+    BorradorPrenda borrador = borradorInompleto();
+    assertThrows(MaterialIncompletoException.class, () -> borrador.crearPrenda());
+  }
+
   public void borradorConTipoNulo() {
     new BorradorPrenda(null);
   }
@@ -71,5 +82,11 @@ public class BorradorPrendaTest {
     borrador.especificarColorSecundario(colorSecundario);
     borrador.especificarTrama(null);
     return borrador.crearPrenda();
+  }
+
+  public BorradorPrenda borradorInompleto() {
+    BorradorPrenda borrador = new BorradorPrenda(tipo);
+    borrador.especificarColorPrincipal(colorPrincipal);
+    return borrador;
   }
 }
