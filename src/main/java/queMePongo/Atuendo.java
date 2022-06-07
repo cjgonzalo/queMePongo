@@ -1,4 +1,4 @@
-package que.me.pongo;
+package queMePongo;
 
 public class Atuendo {
   private Prenda parteSuperior;

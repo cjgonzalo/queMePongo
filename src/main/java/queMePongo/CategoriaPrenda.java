@@ -1,4 +1,4 @@
-package que.me.pongo;
+package queMePongo;
 
 public enum CategoriaPrenda {
   PARTE_SUPERIOR,

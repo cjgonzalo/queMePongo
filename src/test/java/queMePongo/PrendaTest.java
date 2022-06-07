@@ -1,5 +1,4 @@
-package que.me.pongo;
-import org.jetbrains.annotations.NotNull;
+package queMePongo;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;

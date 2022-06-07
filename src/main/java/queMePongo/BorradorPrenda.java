@@ -1,6 +1,4 @@
-package que.me.pongo;
-
-import org.jetbrains.annotations.NotNull;
+package queMePongo;
 
 public class BorradorPrenda {
   TipoPrenda tipo;

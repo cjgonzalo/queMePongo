@@ -1,4 +1,4 @@
-package que.me.pongo;
+package queMePongo;
 
 public class TipoIncompletoException extends PrendaIncompletaException {
   @Override
