@@ -33,4 +33,11 @@ public class Atuendo {
   public Prenda getAccesorios() {
     return accesorios;
   }
+
+  public Boolean aptoParaTemperatura(Double temperatura) {
+    return parteSuperior.aptaParaTemperatura(temperatura) &&
+           parteInferior.aptaParaTemperatura(temperatura) &&
+           calzado.aptaParaTemperatura(temperatura) &&
+           accesorios.aptaParaTemperatura(temperatura);
+  }
 }

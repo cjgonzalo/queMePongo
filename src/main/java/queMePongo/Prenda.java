@@ -8,6 +8,7 @@ public class Prenda {
   Color colorPrincipal;
   Color colorSecundario;
   Trama trama;
+  Double temperaturaMaxima;
 
   public String getCategoria() {
     return tipo.getCategoria();
@@ -31,6 +32,10 @@ public class Prenda {
 
   public Trama getTrama() {
     return trama;
+  }
+
+  public Boolean aptaParaTemperatura(Double temperatura) {
+    return temperatura < temperaturaMaxima;
   }
 
   public Prenda(
