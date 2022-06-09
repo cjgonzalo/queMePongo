@@ -1,6 +1,5 @@
 package quemepongo.climaTests;
 
-import clima.AccuWeatherAPI;
 import clima.EstadoDelTiempo;
 import clima.EstadoHumedad;
 import clima.ServicioMeteorologicoAccuWeather;
@@ -11,19 +10,11 @@ import static org.mockito.Mockito.when;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-
-import java.time.Duration;
-
-
 public class ServicioMeteorologicoTest {
-  AccuWeatherAPI api;
-  Duration validez;
   ServicioMeteorologicoAccuWeather servicio;
 
   @BeforeEach
-  void initialize() {
-    api = new AccuWeatherAPI();
-    validez = Duration.ofHours(2);
+  public void initialize() {
     servicio = mock(ServicioMeteorologicoAccuWeather.class);
   }
 
@@ -34,5 +25,9 @@ public class ServicioMeteorologicoTest {
     assertEquals(servicio.obtenerCondicionesClimaticas("Buenos Aires").getHumedad(), EstadoHumedad.SECO);
   }
 
-
+  @Test
+  public void pasajeDeFarenheitACelcius() {
+    when(servicio.farenheitACelcius(43.7)).thenReturn(6.5);
+    assertEquals(servicio.farenheitACelcius(43.7), 6.5);
+  }
 }
