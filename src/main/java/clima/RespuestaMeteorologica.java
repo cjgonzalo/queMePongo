@@ -12,7 +12,7 @@ public class RespuestaMeteorologica {
   }
 
   public boolean expiro() {
-    return expiracion.isAfter(LocalDateTime.now());
+    return LocalDateTime.now().isAfter(expiracion);
   }
 
   public LocalDateTime getProximaExpiracion() {
