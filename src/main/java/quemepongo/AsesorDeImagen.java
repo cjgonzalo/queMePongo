@@ -1,15 +1,10 @@
-package queMePongo;
+package quemepongo;
 
-import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 import clima.EstadoDelTiempo;
 import clima.ServicioMeteorologicoAccuWeather;
-import queMePongo.Atuendo;
-import queMePongo.Guardarropas;
 
 public class AsesorDeImagen {
   private ServicioMeteorologicoAccuWeather servicioMeteorologicoAccuWeather;

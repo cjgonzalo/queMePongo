@@ -1,4 +1,4 @@
-package queMePongo;
+package quemepongo;
 
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;

@@ -1,4 +1,4 @@
-package queMePongo;
+package quemepongo;
 
 public class PrendaIncompletaException extends RuntimeException {
   public String message() {

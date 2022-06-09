@@ -1,4 +1,4 @@
-package queMePongo;
+package quemepongo;
 
 public class Color {
   int cantidadRojo;

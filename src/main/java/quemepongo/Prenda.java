@@ -1,4 +1,4 @@
-package queMePongo;
+package quemepongo;
 
 import org.jetbrains.annotations.NotNull;
 

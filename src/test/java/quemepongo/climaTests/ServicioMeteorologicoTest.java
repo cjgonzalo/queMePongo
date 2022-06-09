@@ -1,4 +1,4 @@
-package queMePongo.climaTests;
+package quemepongo.climaTests;
 
 import clima.AccuWeatherAPI;
 import clima.EstadoDelTiempo;
@@ -13,9 +13,6 @@ import org.junit.jupiter.api.Test;
 
 
 import java.time.Duration;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 
 public class ServicioMeteorologicoTest {
