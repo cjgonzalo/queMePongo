@@ -35,9 +35,9 @@ public class Atuendo {
   }
 
   public Boolean aptoParaTemperatura(Double temperatura) {
-    return parteSuperior.aptaParaTemperatura(temperatura) &&
-           parteInferior.aptaParaTemperatura(temperatura) &&
-           calzado.aptaParaTemperatura(temperatura) &&
-           accesorios.aptaParaTemperatura(temperatura);
+    return parteSuperior.aptaParaTemperatura(temperatura)
+        && parteInferior.aptaParaTemperatura(temperatura)
+        && calzado.aptaParaTemperatura(temperatura)
+        && accesorios.aptaParaTemperatura(temperatura);
   }
 }
